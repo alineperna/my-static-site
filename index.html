@@ -11,10 +11,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://www.alineperna.com.br">
 <link rel="canonical" href="https://www.alineperna.com.br">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='6' r='3' fill='%231B2A4A' stroke='%231B2A4A' stroke-width='1'/><line x1='16' y1='9' x2='16' y2='22' stroke='%231B2A4A' stroke-width='2'/><line x1='6' y1='14' x2='26' y2='14' stroke='%231B2A4A' stroke-width='2'/><path d='M4 14 L8 20 L12 14' fill='none' stroke='%231B2A4A' stroke-width='1.5'/><path d='M20 14 L24 20 L28 14' fill='none' stroke='%231B2A4A' stroke-width='1.5'/><line x1='12' y1='22' x2='20' y2='22' stroke='%231B2A4A' stroke-width='2'/><line x1='10' y1='25' x2='22' y2='25' stroke='%231B2A4A' stroke-width='2'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='6' r='3' fill='%231B2A4A'/><line x1='16' y1='9' x2='16' y2='22' stroke='%231B2A4A' stroke-width='2'/><line x1='6' y1='14' x2='26' y2='14' stroke='%231B2A4A' stroke-width='2'/><line x1='12' y1='22' x2='20' y2='22' stroke='%231B2A4A' stroke-width='2'/><line x1='10' y1='25' x2='22' y2='25' stroke='%231B2A4A' stroke-width='2'/></svg>">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,202 +27,205 @@
     "streetAddress": "SEP Sul 714/914, Conjunto C, Ed. Santa Maria, sala 311, Asa Sul",
     "addressLocality": "Brasília",
     "addressRegion": "DF",
-    "postalCode": "",
     "addressCountry": "BR"
   },
   "priceRange": "$$",
   "openingHours": "Mo-Fr 08:00-18:00"
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy: #1B2A4A;
-  --navy-light: #243660;
-  --navy-dark: #111D35;
-  --gold: #B8943E;
-  --gold-light: #D4AD4A;
-  --white: #FFFFFF;
-  --bg: #F8F9FA;
-  --bg-alt: #F0F2F5;
-  --text: #2D3748;
-  --text-light: #5A6577;
-  --text-lighter: #8896A6;
-  --whatsapp: #25D366;
-  --whatsapp-hover: #1EBE5A;
-  --radius: 10px;
-  --radius-lg: 16px;
-  --shadow: 0 2px 8px rgba(27,42,74,0.08);
-  --shadow-md: 0 4px 16px rgba(27,42,74,0.10);
-  --shadow-lg: 0 8px 32px rgba(27,42,74,0.12);
+  --ink:      #101624;
+  --ink2:     #1C2840;
+  --gold:     #B8873A;
+  --gold-lt:  #CFA257;
+  --cream:    #F8F5F0;
+  --sand:     #EDE8DC;
+  --white:    #FFFFFF;
+  --body:     #3C3C50;
+  --muted:    #7A7A90;
+  --border:   rgba(0,0,0,0.07);
+  --wa:       #25D366;
+  --wa-h:     #1DB954;
+  --r:        12px;
+  --rr:       20px;
+  --serif:    'Playfair Display', Georgia, serif;
+  --sans:     'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 400;
+  font-family: var(--sans);
   font-size: 16px;
   line-height: 1.7;
-  color: var(--text);
-  background-color: var(--white);
+  color: var(--ink);
+  background: var(--white);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+img  { max-width: 100%; display: block; }
+a    { color: inherit; text-decoration: none; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* ===== UTILITIES ===== */
-.container {
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.wrap {
   width: 100%;
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-.section {
-  padding: 64px 0;
-}
+.sec { padding: 72px 0; }
 
-.section-title {
-  font-size: 1.625rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 24px;
-  line-height: 1.3;
-}
-
-.section-text {
-  font-size: 1rem;
-  color: var(--text);
-  line-height: 1.75;
-  max-width: 640px;
-}
-
-.btn-whatsapp {
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.eyebrow {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 5.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   WHATSAPP BUTTON
+   ============================================================ */
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
-  background-color: var(--whatsapp);
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
+  background: var(--wa);
+  color: #fff;
+  font-family: var(--sans);
   font-size: 1rem;
   font-weight: 600;
   padding: 16px 28px;
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 14px rgba(37,211,102,0.3);
-  text-align: center;
-  justify-content: center;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(37,211,102,0.28);
+  white-space: nowrap;
 }
+.btn-wa:hover  { background: var(--wa-h); transform: translateY(-1px); box-shadow: 0 6px 26px rgba(37,211,102,0.38); }
+.btn-wa:active { transform: translateY(0); }
+.btn-wa svg    { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
+.btn-wa--lg    { font-size: 1.1rem; padding: 20px 36px; }
 
-.btn-whatsapp:hover,
-.btn-whatsapp:focus {
-  background-color: var(--whatsapp-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(37,211,102,0.35);
-}
-
-.btn-whatsapp:active {
-  transform: translateY(0);
-}
-
-.btn-whatsapp svg {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-}
-
-.wa-icon {
-  fill: var(--white);
-}
-
-/* ===== HEADER / NAV ===== */
+/* ============================================================
+   HEADER
+   ============================================================ */
 .site-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(27,42,74,0.06);
-  transition: box-shadow 0.3s;
+  top: 0; left: 0; right: 0;
+  z-index: 300;
+  transition: background 0.35s, box-shadow 0.35s;
 }
-
 .site-header.scrolled {
-  box-shadow: 0 2px 12px rgba(27,42,74,0.08);
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 66px;
 }
 
 .logo {
-  font-size: 0.95rem;
+  font-family: var(--serif);
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--navy);
-  letter-spacing: -0.01em;
+  color: var(--white);
+  transition: color 0.35s;
+  line-height: 1.25;
 }
-
-.logo span {
-  color: var(--gold);
+.logo small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
   font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-style: normal;
 }
+.site-header.scrolled .logo { color: var(--ink); }
 
-.header-cta {
+.header-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--whatsapp);
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  background: var(--wa);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.82rem;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 9px 18px;
   border-radius: 50px;
-  border: none;
-  transition: background-color 0.2s;
+  transition: background 0.2s;
 }
+.header-btn:hover { background: var(--wa-h); }
+.header-btn svg   { width: 15px; height: 15px; fill: #fff; }
 
-.header-cta:hover {
-  background-color: var(--whatsapp-hover);
-}
-
-.header-cta svg {
-  width: 16px;
-  height: 16px;
-}
-
-/* ===== HERO ===== */
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
   min-height: 100svh;
+  background: var(--ink);
   display: flex;
   align-items: center;
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 50%, #2C4470 100%);
-  padding-top: 60px;
+  padding: 90px 0 70px;
   position: relative;
   overflow: hidden;
 }
@@ -233,301 +233,283 @@ a {
 .hero::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -30%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(184,148,62,0.08) 0%, transparent 70%);
-  border-radius: 50%;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 85% 40%, rgba(184,135,58,0.09) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 10% 90%, rgba(16,22,36,0.6) 0%, transparent 60%);
+  pointer-events: none;
 }
 
-.hero-content {
+.hero-accent-line {
+  position: absolute;
+  top: 0; bottom: 0;
+  right: 15%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(184,135,58,0.2) 40%, rgba(184,135,58,0.2) 60%, transparent 100%);
+  display: none;
+}
+
+.hero-inner {
   position: relative;
   z-index: 1;
-  text-align: center;
-  padding: 40px 0;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.85);
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 50px;
-  margin-bottom: 28px;
-}
-
-.hero-badge svg {
-  width: 14px;
-  height: 14px;
+  max-width: 680px;
 }
 
 .hero h1 {
-  font-size: 2rem;
-  font-weight: 700;
   color: var(--white);
-  line-height: 1.2;
-  margin-bottom: 18px;
-  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-lt);
 }
 
 .hero-sub {
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.65;
-  margin-bottom: 36px;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 44px;
+  max-width: 500px;
 }
 
-.hero .btn-whatsapp {
-  width: 100%;
-  max-width: 340px;
-  font-size: 1.05rem;
-  padding: 18px 28px;
-}
-
-.hero-support {
-  margin-top: 16px;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.5);
-}
-
-/* ===== SECTION 2: PROBLEMS ===== */
-.problems {
-  background: var(--bg);
-}
-
-.problem-list {
-  list-style: none;
+.hero-cta {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 28px;
+  align-items: flex-start;
+  gap: 14px;
 }
 
-.problem-item {
+.hero-note {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ============================================================
+   PROBLEMS
+   ============================================================ */
+.problems { background: var(--cream); }
+
+.problems-intro { margin-bottom: 36px; }
+
+.problems-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.prob-item {
   display: flex;
   align-items: flex-start;
   gap: 14px;
   background: var(--white);
-  padding: 18px 16px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border-left: 3px solid var(--gold);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 18px 20px;
+  transition: border-color 0.2s;
 }
+.prob-item:hover { border-color: var(--gold); }
 
-.problem-item svg {
-  width: 22px;
-  height: 22px;
+.prob-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  border-radius: 50%;
   flex-shrink: 0;
-  margin-top: 1px;
-  color: var(--gold);
+  margin-top: 9px;
 }
 
-.problem-item span {
+.prob-item span {
   font-size: 0.95rem;
   line-height: 1.55;
-  color: var(--text);
+  color: var(--body);
 }
 
-.problems .section-text {
-  margin-bottom: 28px;
+.problems-note {
+  font-size: 0.95rem;
+  color: var(--body);
+  line-height: 1.75;
+  max-width: 620px;
+  margin-bottom: 32px;
 }
 
-.problems .btn-whatsapp {
-  width: 100%;
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about { background: var(--white); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
 }
 
-/* ===== SECTION 3: ABOUT ===== */
-.about-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  box-shadow: var(--shadow-md);
+.about-photo-col {
+  display: flex;
+  justify-content: center;
 }
 
 .about-photo {
-  width: 100px;
-  height: 100px;
+  width: 148px;
+  height: 148px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 24px;
-  flex-shrink: 0;
-  background: var(--navy);
+  background: var(--sand);
+  border: 5px solid var(--cream);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
 }
 
-.about-card .section-title {
-  text-align: center;
-}
+.about-text-col h2 { margin-bottom: 20px; }
 
-.about-card .section-text {
-  max-width: none;
+.about-p {
+  font-size: 0.975rem;
+  line-height: 1.8;
+  color: var(--body);
 }
+.about-p + .about-p { margin-top: 14px; }
 
-.about-card .section-text + .section-text {
-  margin-top: 16px;
-}
-
-.about-badges {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 28px;
 }
 
-.about-badge {
-  display: flex;
+.chip {
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: var(--bg);
-  padding: 14px 12px;
-  border-radius: var(--radius);
-  font-size: 0.85rem;
+  gap: 7px;
+  font-size: 0.8rem;
   font-weight: 500;
-  color: var(--navy);
-  line-height: 1.4;
+  color: var(--body);
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  padding: 7px 14px;
+  border-radius: 50px;
 }
-
-.about-badge svg {
-  width: 20px;
-  height: 20px;
+.chip svg {
+  width: 13px;
+  height: 13px;
   flex-shrink: 0;
   color: var(--gold);
 }
 
-/* ===== SECTION 4: PRACTICE AREAS ===== */
-.areas {
-  background: var(--bg);
-}
+/* ============================================================
+   PRACTICE AREAS
+   ============================================================ */
+.areas { background: var(--cream); }
+
+.areas-header { margin-bottom: 40px; }
 
 .areas-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 14px;
 }
 
 .area-card {
   background: var(--white);
-  border-radius: var(--radius);
-  padding: 24px 20px;
-  box-shadow: var(--shadow);
-  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 28px 24px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
-
 .area-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+  border-color: var(--gold);
 }
 
-.area-card-icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(27,42,74,0.06);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
+.area-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--sand);
+  line-height: 1;
+  margin-bottom: 14px;
 }
 
-.area-card-icon svg {
-  width: 22px;
-  height: 22px;
-  color: var(--navy);
-}
-
-.area-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
+.area-card h3 { margin-bottom: 8px; }
 
 .area-card p {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  line-height: 1.65;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
-/* ===== SECTION 5: BUSINESS CONSULTING ===== */
+/* ============================================================
+   CONSULTING CALLOUT
+   ============================================================ */
 .consulting {
-  background: var(--white);
-  border-top: 1px solid var(--bg-alt);
-  border-bottom: 1px solid var(--bg-alt);
+  background: var(--ink2);
+  padding: 80px 0;
 }
 
-.consulting-inner {
-  background: var(--bg);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
+.consulting-card {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--rr);
+  padding: 52px 40px;
+  max-width: 700px;
 }
 
-.consulting .section-text {
-  margin-bottom: 8px;
+.consulting-card h2 {
+  color: var(--white);
+  margin-bottom: 18px;
 }
 
-.consulting .text-small {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  margin-bottom: 24px;
-  line-height: 1.65;
+.consulting-p {
+  font-size: 0.975rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  margin-bottom: 10px;
 }
 
-.consulting .btn-whatsapp {
-  width: 100%;
-  background-color: var(--navy);
-  box-shadow: 0 4px 14px rgba(27,42,74,0.2);
+.consulting-note {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 36px;
+  line-height: 1.7;
 }
 
-.consulting .btn-whatsapp:hover {
-  background-color: var(--navy-light);
-  box-shadow: 0 6px 20px rgba(27,42,74,0.25);
-}
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+.steps { background: var(--white); }
+.steps-header { margin-bottom: 52px; }
 
-/* ===== SECTION 6: STEPS ===== */
 .steps-list {
   display: flex;
   flex-direction: column;
   gap: 0;
-  position: relative;
 }
 
 .step {
   display: flex;
-  gap: 20px;
+  gap: 28px;
+  padding-bottom: 44px;
   position: relative;
-  padding-bottom: 36px;
 }
+.step:last-child { padding-bottom: 0; }
 
-.step:last-child {
-  padding-bottom: 0;
-}
-
-.step-indicator {
+.step-left {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
 }
 
-.step-number {
-  width: 44px;
-  height: 44px;
+.step-num {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: var(--navy);
+  background: var(--ink);
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-family: var(--serif);
+  font-size: 1.25rem;
   font-weight: 700;
   flex-shrink: 0;
   position: relative;
@@ -535,495 +517,394 @@ a {
 }
 
 .step-line {
-  width: 2px;
+  width: 1px;
   flex: 1;
-  background: linear-gradient(to bottom, var(--navy), rgba(27,42,74,0.15));
+  min-height: 24px;
+  background: var(--sand);
   margin-top: 8px;
 }
+.step:last-child .step-line { display: none; }
 
-.step:last-child .step-line {
-  display: none;
-}
-
-.step-content {
-  padding-top: 8px;
-}
-
-.step-content h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 6px;
-}
-
-.step-content p {
+.step-body { padding-top: 10px; }
+.step-body h3 { margin-bottom: 8px; }
+.step-body p {
   font-size: 0.9rem;
-  color: var(--text-light);
-  line-height: 1.65;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
-/* ===== SECTION 7: FAQ ===== */
-.faq {
-  background: var(--bg);
-}
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq { background: var(--cream); }
+.faq-header { margin-bottom: 36px; }
 
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+.faq-list { display: flex; flex-direction: column; gap: 8px; }
 
 .faq-item {
   background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
   overflow: hidden;
 }
 
-.faq-question {
+.faq-btn {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 16px;
   width: 100%;
-  padding: 18px 16px;
-  border: none;
+  padding: 20px 24px;
   background: none;
+  border: none;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--sans);
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--ink);
   text-align: left;
   line-height: 1.45;
-  gap: 12px;
 }
+.faq-btn:hover { background: rgba(0,0,0,0.02); }
 
-.faq-question:hover {
-  background: rgba(27,42,74,0.02);
-}
-
-.faq-icon {
-  width: 24px;
-  height: 24px;
+.faq-ico {
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
+  color: var(--muted);
   transition: transform 0.25s ease;
-  color: var(--text-lighter);
 }
+.faq-item.open .faq-ico { transform: rotate(180deg); }
 
-.faq-item.active .faq-icon {
-  transform: rotate(45deg);
-}
-
-.faq-answer {
+.faq-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.32s ease;
 }
-
-.faq-answer-inner {
-  padding: 0 16px 18px;
+.faq-body-inner {
+  padding: 0 24px 22px;
   font-size: 0.9rem;
-  color: var(--text-light);
-  line-height: 1.7;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-/* ===== SECTION 8: FINAL CTA ===== */
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
 .final-cta {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
+  background: var(--ink);
+  padding: 88px 0;
   text-align: center;
-  padding: 64px 0;
 }
 
-.final-cta .section-title {
+.final-cta h2 {
   color: var(--white);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-.final-cta .section-text {
-  color: rgba(255,255,255,0.8);
-  margin: 0 auto 32px;
-  text-align: center;
-}
-
-.final-cta .btn-whatsapp {
-  width: 100%;
-  max-width: 380px;
-  font-size: 1.05rem;
-  padding: 18px 28px;
-}
-
-.final-cta-support {
-  margin-top: 16px;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.45);
-}
-
-/* ===== FOOTER ===== */
-.site-footer {
-  background: var(--navy-dark);
-  color: rgba(255,255,255,0.6);
-  padding: 40px 0 32px;
-  font-size: 0.85rem;
-  line-height: 1.7;
-}
-
-.footer-brand {
+.final-cta-sub {
   font-size: 1rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 540px;
+  margin: 0 auto 44px;
+  line-height: 1.8;
+}
+
+.final-cta-note {
+  margin-top: 18px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.28);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: #080B14;
+  color: rgba(255,255,255,0.4);
+  padding: 52px 0 36px;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 4px;
 }
-
 .footer-oab {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 4px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 22px;
 }
-
-.footer-location {
-  margin-bottom: 20px;
-}
-
-.footer-contact {
-  margin-bottom: 20px;
-}
-
 .footer-contact a {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.5);
   transition: color 0.2s;
 }
-
-.footer-contact a:hover {
-  color: var(--white);
+.footer-contact a:hover { color: var(--white); }
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin: 24px 0;
 }
-
 .footer-disclaimer {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.3);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 20px;
-  margin-top: 20px;
-  line-height: 1.6;
+  color: rgba(255,255,255,0.2);
+  line-height: 1.65;
 }
 
-/* ===== FLOATING WHATSAPP ===== */
+/* ============================================================
+   FLOATING WHATSAPP
+   ============================================================ */
 .wa-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 56px;
-  height: 56px;
-  background: var(--whatsapp);
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: var(--wa);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
-  z-index: 99;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.38);
+  z-index: 299;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .wa-float:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.5);
 }
+.wa-float svg { width: 28px; height: 28px; fill: #fff; }
 
-.wa-float svg {
-  width: 28px;
-  height: 28px;
-}
-
-/* ===== RESPONSIVE ===== */
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 @media (min-width: 480px) {
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .problems .btn-whatsapp,
-  .consulting .btn-whatsapp {
-    width: auto;
-  }
+  .problems-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (min-width: 640px) {
-  .section {
-    padding: 80px 0;
-  }
-
-  .hero h1 {
-    font-size: 2.6rem;
-  }
-
-  .hero-sub {
-    font-size: 1.1rem;
-  }
-
-  .container {
-    padding: 0 32px;
-  }
-
-  .areas-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .about-card {
-    padding: 40px 32px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0 32px;
-  }
-
-  .about-photo {
-    grid-row: 1 / 3;
-    margin: 0;
-    width: 110px;
-    height: 110px;
-    align-self: start;
-  }
-
-  .about-card .section-title {
-    text-align: left;
-    align-self: end;
-  }
-
-  .about-texts {
-    grid-column: 2;
-  }
-
-  .about-badges {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(4, 1fr);
-  }
+@media (min-width: 600px) {
+  .wrap { padding: 0 40px; }
+  .sec  { padding: 88px 0; }
+  .areas-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 768px) {
-  .section-title {
-    font-size: 2rem;
+  .about-grid {
+    grid-template-columns: 160px 1fr;
+    gap: 52px;
+    align-items: start;
   }
-
-  .header-inner {
-    height: 68px;
-  }
-
-  .hero {
-    padding-top: 68px;
-  }
-
-  .hero h1 {
-    font-size: 2.8rem;
-  }
+  .about-photo-col { justify-content: flex-start; }
 
   .steps-list {
     flex-direction: row;
-    gap: 24px;
+    align-items: flex-start;
   }
-
   .step {
     flex-direction: column;
     align-items: center;
     text-align: center;
     flex: 1;
     padding-bottom: 0;
+    padding-left: 16px;
+    padding-right: 16px;
     gap: 0;
+    position: relative;
   }
-
-  .step-indicator {
+  .step-left {
     flex-direction: row;
-    margin-bottom: 16px;
     width: 100%;
     justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
   }
-
   .step-line {
-    display: none;
-  }
-
-  .step::after {
-    content: '';
     position: absolute;
-    top: 22px;
-    left: calc(50% + 30px);
-    width: calc(100% - 60px);
-    height: 2px;
-    background: linear-gradient(to right, var(--navy), rgba(27,42,74,0.15));
+    top: 50%;
+    left: calc(50% + 32px);
+    right: calc(-50% + 32px);
+    width: auto;
+    height: 1px;
+    min-height: unset;
+    flex: unset;
+    margin: 0;
+    transform: translateY(-50%);
   }
+  .step-body { padding-top: 0; }
 
-  .step:last-child::after {
-    display: none;
-  }
-
-  .step-content {
-    padding-top: 0;
-  }
-
-  .final-cta {
-    padding: 80px 0;
-  }
+  .hero-accent-line { display: block; }
+  .consulting-card { padding: 60px 52px; }
 }
 
-@media (min-width: 960px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
+@media (min-width: 900px) {
+  .areas-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
 
-  .about-badges {
-    grid-template-columns: repeat(4, 1fr);
-  }
+@media (min-width: 1080px) {
+  .wrap { padding: 0 48px; }
 }
 </style>
 </head>
 <body>
 
-<!-- Header -->
+<!-- HEADER -->
 <header class="site-header" id="header">
-  <div class="container header-inner">
-    <div class="logo">Aline Perna <span>Advocacia</span></div>
-    <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista." class="header-cta" aria-label="Entrar em contato pelo WhatsApp">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
-      <span>WhatsApp</span>
+  <div class="wrap header-inner">
+    <a href="#inicio" class="logo" aria-label="Aline Perna Advocacia — Início">
+      Aline Perna
+      <small>Advocacia Trabalhista</small>
+    </a>
+    <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista."
+       class="header-btn"
+       aria-label="Entrar em contato pelo WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
+      WhatsApp
     </a>
   </div>
 </header>
 
-<!-- Section 1: Hero -->
+<!-- HERO -->
 <section class="hero" id="inicio">
-  <div class="container hero-content">
-    <div class="hero-badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-      Brasília-DF
+  <div class="hero-accent-line" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow" style="color:rgba(207,162,87,0.9)">Brasília&ndash;DF &middot; OAB/DF nº 43.530</div>
+      <h1>Advocacia trabalhista em <em>Brasília&#8209;DF</em></h1>
+      <p class="hero-sub">Advogada especialista com mais de 10 anos de experiência na defesa de trabalhadores em Brasília e região.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista."
+           class="btn-wa btn-wa--lg"
+           aria-label="Falar com a Dra. Aline Perna pelo WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
+          Fale com a Dra. Aline Perna
+        </a>
+        <p class="hero-note">Atendimento pelo WhatsApp &middot; (61) 98306-8500</p>
+      </div>
     </div>
-    <h1>Advocacia trabalhista em Brasília&#8209;DF</h1>
-    <p class="hero-sub">Advogada especialista com mais de 10 anos de experiência na defesa de trabalhadores em Brasília e região.</p>
-    <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista." class="btn-whatsapp" aria-label="Falar com a Dra. Aline Perna pelo WhatsApp">
-      <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
-      Fale com a Dra. Aline Perna
-    </a>
-    <p class="hero-support">Atendimento pelo WhatsApp &middot; (61) 98306-8500</p>
   </div>
 </section>
 
-<!-- Section 2: Problem Identification -->
-<section class="section problems" id="situacoes">
-  <div class="container">
-    <h2 class="section-title">Você tem dúvidas sobre alguma dessas situações?</h2>
-    <ul class="problem-list">
-      <li class="problem-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+<!-- PROBLEMS -->
+<section class="sec problems" id="situacoes">
+  <div class="wrap">
+    <div class="problems-intro">
+      <div class="eyebrow">Situações comuns</div>
+      <h2>Você tem dúvidas sobre alguma dessas situações?</h2>
+    </div>
+    <ul class="problems-grid">
+      <li class="prob-item">
+        <span class="prob-dot" aria-hidden="true"></span>
         <span>Fui demitido e tenho dúvidas sobre as verbas rescisórias</span>
       </li>
-      <li class="problem-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <li class="prob-item">
+        <span class="prob-dot" aria-hidden="true"></span>
         <span>Trabalho sem carteira assinada</span>
       </li>
-      <li class="problem-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <li class="prob-item">
+        <span class="prob-dot" aria-hidden="true"></span>
         <span>Faço horas extras e não recebo por elas</span>
       </li>
-      <li class="problem-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <li class="prob-item">
+        <span class="prob-dot" aria-hidden="true"></span>
         <span>Sofro assédio moral ou sexual no trabalho</span>
       </li>
-      <li class="problem-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <li class="prob-item">
+        <span class="prob-dot" aria-hidden="true"></span>
         <span>Fui demitido durante período de estabilidade ou licença médica</span>
       </li>
-      <li class="problem-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <li class="prob-item">
+        <span class="prob-dot" aria-hidden="true"></span>
         <span>Meu empregador não deposita o FGTS corretamente</span>
       </li>
-      <li class="problem-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <li class="prob-item">
+        <span class="prob-dot" aria-hidden="true"></span>
         <span>Desejo sair do emprego, mas não sei quais são os meus direitos</span>
       </li>
     </ul>
-    <p class="section-text">Cada uma dessas situações pode dar origem a direitos previstos na legislação trabalhista. A orientação de um profissional especializado é o primeiro passo para entender o seu caso.</p>
-    <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista." class="btn-whatsapp" aria-label="Tire suas dúvidas pelo WhatsApp">
-      <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
+    <p class="problems-note">Cada uma dessas situações pode dar origem a direitos previstos na legislação trabalhista. A orientação de um profissional especializado é o primeiro passo para entender o seu caso.</p>
+    <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista."
+       class="btn-wa"
+       aria-label="Tire suas dúvidas pelo WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
       Tire suas dúvidas pelo WhatsApp
     </a>
   </div>
 </section>
 
-<!-- Section 3: About -->
-<section class="section" id="sobre">
-  <div class="container">
-    <div class="about-card">
-      <img class="about-photo" src="foto.jpg" alt="Dra. Aline Perna — Advogada Trabalhista" width="110" height="110">
-      <h2 class="section-title">Dra. Aline Perna</h2>
-      <div class="about-texts">
-        <p class="section-text">A Dra. Aline Perna é advogada inscrita na OAB/DF (nº 43.530) e atua há mais de 10 anos na área trabalhista, com ênfase na orientação e defesa de trabalhadores em Brasília-DF e regiões próximas.</p>
-        <p class="section-text">Sua atuação é pautada pela análise cuidadosa de cada caso, pela transparência na comunicação com o cliente e pela explicação acessível de todas as etapas do processo.</p>
+<!-- ABOUT -->
+<section class="sec about" id="sobre">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo-col">
+        <img class="about-photo" src="foto.jpg" alt="Dra. Aline Perna — Advogada Trabalhista" width="148" height="148">
       </div>
-      <div class="about-badges">
-        <div class="about-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-          Mais de 10 anos de atuação
-        </div>
-        <div class="about-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          Inscrição na OAB/DF
-        </div>
-        <div class="about-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Brasília-DF e Entorno
-        </div>
-        <div class="about-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          Presencial e videochamada
+      <div class="about-text-col">
+        <div class="eyebrow">Sobre a advogada</div>
+        <h2>Dra. Aline Perna</h2>
+        <p class="about-p">A Dra. Aline Perna é advogada inscrita na OAB/DF (nº 43.530) e atua há mais de 10 anos na área trabalhista, com ênfase na orientação e defesa de trabalhadores em Brasília-DF e regiões próximas.</p>
+        <p class="about-p">Sua atuação é pautada pela análise cuidadosa de cada caso, pela transparência na comunicação com o cliente e pela explicação acessível de todas as etapas do processo.</p>
+        <div class="chips">
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            Mais de 10 anos de atuação
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            OAB/DF nº 43.530
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Brasília-DF e Entorno
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Presencial e videochamada
+          </span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 4: Practice Areas -->
-<section class="section areas" id="atuacao">
-  <div class="container">
-    <h2 class="section-title">Áreas de atuação</h2>
+<!-- PRACTICE AREAS -->
+<section class="sec areas" id="atuacao">
+  <div class="wrap">
+    <div class="areas-header">
+      <div class="eyebrow">O que atendo</div>
+      <h2>Áreas de atuação</h2>
+    </div>
     <div class="areas-grid">
       <div class="area-card">
-        <div class="area-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        </div>
+        <div class="area-num">01</div>
         <h3>Rescisão e verbas trabalhistas</h3>
-        <p>Análise e orientação sobre valores devidos na rescisão do contrato de trabalho: saldo de salário, aviso prévio, férias, 13º salário e multa do FGTS.</p>
+        <p>Análise e orientação sobre valores devidos na rescisão do contrato: saldo de salário, aviso prévio, férias, 13º salário e multa do FGTS.</p>
       </div>
       <div class="area-card">
-        <div class="area-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
+        <div class="area-num">02</div>
         <h3>Horas extras e adicionais</h3>
         <p>Avaliação de direitos relativos a horas extras, adicional noturno, insalubridade e periculosidade.</p>
       </div>
       <div class="area-card">
-        <div class="area-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        </div>
+        <div class="area-num">03</div>
         <h3>Assédio moral e sexual</h3>
         <p>Orientação jurídica e adoção das medidas cabíveis para responsabilização do empregador, quando devida.</p>
       </div>
       <div class="area-card">
-        <div class="area-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
+        <div class="area-num">04</div>
         <h3>Registro em carteira e vínculo empregatício</h3>
         <p>Análise de situações em que o trabalhador exerce atividades sem registro formal e pode ter direito ao reconhecimento do vínculo.</p>
       </div>
       <div class="area-card">
-        <div class="area-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
+        <div class="area-num">05</div>
         <h3>Estabilidade e reintegração</h3>
         <p>Orientação em casos de dispensa durante gestação, acidente de trabalho, doença ocupacional e demais hipóteses legais de estabilidade.</p>
       </div>
       <div class="area-card">
-        <div class="area-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
+        <div class="area-num">06</div>
         <h3>Acordos e negociações</h3>
         <p>Análise de propostas de acordo para verificar se os direitos do trabalhador estão sendo observados.</p>
       </div>
@@ -1031,190 +912,203 @@ a {
   </div>
 </section>
 
-<!-- Section 5: Business Consulting -->
-<section class="section consulting" id="empresas">
-  <div class="container">
-    <div class="consulting-inner">
-      <h2 class="section-title">Consultoria trabalhista para empresas</h2>
-      <p class="section-text">A Dra. Aline Perna também presta consultoria jurídica a empresas interessadas em manter suas práticas trabalhistas adequadas à legislação vigente, com foco na prevenção de passivos.</p>
-      <p class="text-small">O serviço está disponível por demanda ou mediante planos mensais com valor fixo, voltados a pequenas e médias empresas.</p>
-      <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista." class="btn-whatsapp" aria-label="Solicitar informações sobre consultoria pelo WhatsApp">
-        <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
+<!-- CONSULTING CALLOUT -->
+<section class="consulting" id="empresas">
+  <div class="wrap">
+    <div class="consulting-card">
+      <div class="eyebrow" style="color:var(--gold-lt);">Para empresas</div>
+      <h2>Consultoria trabalhista para empresas</h2>
+      <p class="consulting-p">A Dra. Aline Perna também presta consultoria jurídica a empresas interessadas em manter suas práticas trabalhistas adequadas à legislação vigente, com foco na prevenção de passivos.</p>
+      <p class="consulting-note">O serviço está disponível por demanda ou mediante planos mensais com valor fixo, voltados a pequenas e médias empresas.</p>
+      <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista."
+         class="btn-wa"
+         aria-label="Solicitar informações sobre consultoria pelo WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
         Solicite informações pelo WhatsApp
       </a>
     </div>
   </div>
 </section>
 
-<!-- Section 6: How It Works -->
-<section class="section" id="atendimento">
-  <div class="container">
-    <h2 class="section-title">Como funciona o atendimento</h2>
+<!-- HOW IT WORKS -->
+<section class="sec steps" id="atendimento">
+  <div class="wrap">
+    <div class="steps-header">
+      <div class="eyebrow">Processo</div>
+      <h2>Como funciona o atendimento</h2>
+    </div>
     <div class="steps-list">
       <div class="step">
-        <div class="step-indicator">
-          <div class="step-number">1</div>
-          <div class="step-line"></div>
+        <div class="step-left">
+          <div class="step-num">1</div>
+          <div class="step-line" aria-hidden="true"></div>
         </div>
-        <div class="step-content">
+        <div class="step-body">
           <h3>Entre em contato</h3>
           <p>Envie uma mensagem pelo WhatsApp. A consulta inicial serve para entender a sua situação.</p>
         </div>
       </div>
       <div class="step">
-        <div class="step-indicator">
-          <div class="step-number">2</div>
-          <div class="step-line"></div>
+        <div class="step-left">
+          <div class="step-num">2</div>
+          <div class="step-line" aria-hidden="true"></div>
         </div>
-        <div class="step-content">
+        <div class="step-body">
           <h3>Análise do caso</h3>
           <p>A Dra. Aline avalia os fatos e os documentos pertinentes e explica, de forma clara, quais direitos podem estar envolvidos.</p>
         </div>
       </div>
       <div class="step">
-        <div class="step-indicator">
-          <div class="step-number">3</div>
-          <div class="step-line"></div>
+        <div class="step-left">
+          <div class="step-num">3</div>
+          <div class="step-line" aria-hidden="true"></div>
         </div>
-        <div class="step-content">
+        <div class="step-body">
           <h3>Definição da estratégia</h3>
-          <p>Com base na análise, são apresentadas as medidas judiciais ou extrajudiciais adequadas ao seu caso, para que você tome uma decisão informada.</p>
+          <p>São apresentadas as medidas judiciais ou extrajudiciais adequadas ao seu caso, para que você tome uma decisão informada.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 7: FAQ -->
-<section class="section faq" id="duvidas">
-  <div class="container">
-    <h2 class="section-title">Dúvidas frequentes</h2>
+<!-- FAQ -->
+<section class="sec faq" id="duvidas">
+  <div class="wrap">
+    <div class="faq-header">
+      <div class="eyebrow">Dúvidas</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-btn" aria-expanded="false">
           <span>Como são cobrados os honorários em ações trabalhistas?</span>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">A forma de cobrança varia conforme o caso. Em muitas situações, é possível estabelecer honorários condicionados ao resultado. Na consulta inicial, a Dra. Aline explica as opções aplicáveis.</div>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">A forma de cobrança varia conforme o caso. Em muitas situações, é possível estabelecer honorários condicionados ao resultado. Na consulta inicial, a Dra. Aline explica as opções aplicáveis.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-btn" aria-expanded="false">
           <span>Quanto tempo costuma durar um processo trabalhista?</span>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">O prazo depende da complexidade do caso e do andamento do Judiciário. A Dra. Aline acompanha cada etapa e mantém o cliente informado sobre o andamento.</div>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">O prazo depende da complexidade do caso e do andamento do Judiciário. A Dra. Aline acompanha cada etapa e mantém o cliente informado sobre o andamento.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-btn" aria-expanded="false">
           <span>Posso buscar meus direitos mesmo ainda empregado?</span>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">Sim, a legislação assegura esse direito. Contudo, cada situação exige análise específica. Converse com a Dra. Aline para entender a melhor conduta no seu caso.</div>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">Sim, a legislação assegura esse direito. Contudo, cada situação exige análise específica. Converse com a Dra. Aline para entender a melhor conduta no seu caso.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-btn" aria-expanded="false">
           <span>Existe prazo para entrar com uma ação trabalhista?</span>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">O trabalhador dispõe de até 2 anos após o término do contrato para ingressar com a ação, podendo pleitear direitos dos últimos 5 anos do vínculo. Se você tem dúvidas sobre o seu prazo, procure orientação o quanto antes.</div>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">O trabalhador dispõe de até 2 anos após o término do contrato para ingressar com a ação, podendo pleitear direitos dos últimos 5 anos do vínculo. Se você tem dúvidas sobre o seu prazo, procure orientação o quanto antes.</div>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-btn" aria-expanded="false">
           <span>O atendimento é presencial ou online?</span>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <svg class="faq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer" role="region">
-          <div class="faq-answer-inner">A Dra. Aline atende de forma presencial em Brasília-DF e também por videochamada, conforme a necessidade de cada cliente.</div>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">A Dra. Aline atende de forma presencial em Brasília-DF e também por videochamada, conforme a necessidade de cada cliente.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section 8: Final CTA -->
+<!-- FINAL CTA -->
 <section class="final-cta" id="contato">
-  <div class="container">
-    <h2 class="section-title">Conheça os seus direitos.</h2>
-    <p class="section-text">Se você tem dúvidas sobre a sua situação trabalhista, o primeiro passo é buscar orientação profissional. Entre em contato com a Dra. Aline Perna.</p>
-    <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista." class="btn-whatsapp" aria-label="Falar pelo WhatsApp com a Dra. Aline Perna">
-      <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-lt);justify-content:center;">Contato</div>
+    <h2>Conheça os seus direitos.</h2>
+    <p class="final-cta-sub">Se você tem dúvidas sobre a sua situação trabalhista, o primeiro passo é buscar orientação profissional. Entre em contato com a Dra. Aline Perna.</p>
+    <a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista."
+       class="btn-wa btn-wa--lg"
+       aria-label="Falar pelo WhatsApp com a Dra. Aline Perna">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
       WhatsApp &middot; (61) 98306-8500
     </a>
-    <p class="final-cta-support">Atendimento de segunda a sexta, em horário comercial.</p>
+    <p class="final-cta-note">Atendimento de segunda a sexta, em horário comercial.</p>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-brand">Aline Perna — Advocacia Trabalhista</div>
+  <div class="wrap">
+    <div class="footer-logo">Aline Perna — Advocacia Trabalhista</div>
     <div class="footer-oab">OAB/DF nº 43.530</div>
-    <div class="footer-location">Brasília — Distrito Federal</div>
     <div class="footer-contact">
-      Telefone e WhatsApp: <a href="tel:+5561983068500">(61) 98306-8500</a><br>
-      E-mail: <a href="mailto:aline@alineperna.com.br">aline@alineperna.com.br</a><br>
-      Endereço: SEP Sul 714/914, Conjunto C, Ed. Santa Maria, sala 311, Asa Sul, Brasília-DF
+      Brasília — Distrito Federal<br>
+      SEP Sul 714/914, Conj. C, Ed. Santa Maria, sala 311, Asa Sul<br>
+      WhatsApp: <a href="tel:+5561983068500">(61) 98306-8500</a><br>
+      E-mail: <a href="mailto:aline@alineperna.com.br">aline@alineperna.com.br</a>
     </div>
-    <div class="footer-disclaimer">
+    <hr class="footer-divider">
+    <p class="footer-disclaimer">
       Este site tem caráter exclusivamente informativo e não constitui oferta de serviços.<br>
       &copy; 2026 — Todos os direitos reservados.
-    </div>
+    </p>
   </div>
 </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista." class="wa-float" aria-label="Enviar mensagem pelo WhatsApp" target="_blank" rel="noopener noreferrer">
-  <svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/5561983068500?text=Ol%C3%A1%2C%20Dra.%20Aline.%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20direito%20trabalhista."
+   class="wa-float"
+   aria-label="Enviar mensagem pelo WhatsApp"
+   target="_blank"
+   rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.168 1.6 5.986L0 24l6.305-1.654C8.07 23.44 9.993 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.507-5.283-1.466l-.38-.225-3.937 1.033 1.05-3.84-.248-.394A9.784 9.784 0 0 1 2.18 12c0-5.414 4.406-9.82 9.82-9.82 5.414 0 9.82 4.406 9.82 9.82 0 5.414-4.406 9.82-9.82 9.82z"/></svg>
 </a>
 
 <script>
-// Header scroll effect
-(function() {
-  var header = document.getElementById('header');
-  var lastScroll = 0;
-  window.addEventListener('scroll', function() {
-    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollY > 10) {
-      header.classList.add('scrolled');
+// Header: transparent on hero, white after scroll
+(function () {
+  var hdr = document.getElementById('header');
+  function update() {
+    if ((window.pageYOffset || document.documentElement.scrollTop) > 60) {
+      hdr.classList.add('scrolled');
     } else {
-      header.classList.remove('scrolled');
+      hdr.classList.remove('scrolled');
     }
-    lastScroll = scrollY;
-  }, { passive: true });
-})();
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}());
 
 // FAQ accordion
-(function() {
+(function () {
   var items = document.querySelectorAll('.faq-item');
-  items.forEach(function(item) {
-    var btn = item.querySelector('.faq-question');
-    var answer = item.querySelector('.faq-answer');
-    btn.addEventListener('click', function() {
-      var isActive = item.classList.contains('active');
-      // Close all
-      items.forEach(function(other) {
-        other.classList.remove('active');
-        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        other.querySelector('.faq-answer').style.maxHeight = null;
+  items.forEach(function (item) {
+    var btn  = item.querySelector('.faq-btn');
+    var body = item.querySelector('.faq-body');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      items.forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-body').style.maxHeight = null;
       });
-      // Open clicked if it was closed
-      if (!isActive) {
-        item.classList.add('active');
+      if (!isOpen) {
+        item.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
+        body.style.maxHeight = body.scrollHeight + 'px';
       }
     });
   });
-})();
+}());
 </script>
-
 </body>
 </html>
