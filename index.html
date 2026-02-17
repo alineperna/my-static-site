@@ -340,24 +340,7 @@ h3 {
 .about { background: var(--white); }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-
-.about-photo-col {
-  display: flex;
-  justify-content: center;
-}
-
-.about-photo {
-  width: 148px;
-  height: 148px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--sand);
-  border: 5px solid var(--cream);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  max-width: 720px;
 }
 
 .about-text-col h2 { margin-bottom: 20px; }
@@ -693,13 +676,6 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  .about-grid {
-    grid-template-columns: 160px 1fr;
-    gap: 52px;
-    align-items: start;
-  }
-  .about-photo-col { justify-content: flex-start; }
-
   .steps-list {
     flex-direction: row;
     align-items: flex-start;
@@ -839,9 +815,6 @@ h3 {
 <section class="sec about" id="sobre">
   <div class="wrap">
     <div class="about-grid">
-      <div class="about-photo-col">
-        <img class="about-photo" src="foto.jpg" alt="Dra. Aline Perna — Advogada Trabalhista" width="148" height="148">
-      </div>
       <div class="about-text-col">
         <div class="eyebrow">Sobre a advogada</div>
         <h2>Dra. Aline Perna</h2>
@@ -865,7 +838,6 @@ h3 {
             Presencial e videochamada
           </span>
         </div>
-      </div>
     </div>
   </div>
 </section>
